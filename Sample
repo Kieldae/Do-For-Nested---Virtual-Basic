@@ -1,0 +1,36 @@
+Public Class Form3
+    Private Sub btnDo_Click(sender As Object, e As EventArgs) Handles btnDo.Click
+
+        Dim counter As Integer = 0
+        Do While counter < 5
+            listDisplay.Items.Add("This is an example of Do Loop")
+            counter += 1
+
+        Loop
+
+    End Sub
+    
+    Private Sub btnFor_Click(sender As Object, e As EventArgs) Handles btnFor.Click
+
+        Dim counter As Integer = 0
+        For counter = 1 To 5
+            listDisplay.Items.Add("This is an example of For Loop")
+
+        Next
+
+    End Sub
+    
+     Private Sub btnNested_Click(sender As Object, e As EventArgs) Handles btnNested.Click
+
+        For num1 As Integer = 1 To 4
+            For num2 As Integer = 1 To 3
+                listDisplay.Items.Add(num1 * num2)
+            Next
+            listDisplay.Items.Add("_______________")
+        Next
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        listDisplay.Items.Clear()
+    End Sub
+End Class
